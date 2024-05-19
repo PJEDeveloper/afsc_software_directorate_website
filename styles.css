@@ -1,0 +1,355 @@
+a {
+    text-decoration: none;
+}
+/*HTML and body element style objects*/
+html, body {
+    height: 100%; /*100% height to ensure html and body elements take up full height of the viewport*/
+    position: relative; /*Positions the html and body elements relatively to their normal positions*/
+    margin: 0; /*Zero margin for html and body element*/
+    padding: 0; /*Zero padding for html and body element*/
+}
+/*Body element style object*/
+body{
+    position: relative; /*Body to positioned relatively to its normal position*/
+    font-family: Georgia, sans-serif;
+}
+/*Pseudo-Body element used to be inserted before the content of the body element*/
+body::before{
+    /*Initial content is a blank string*/
+    content:'';
+    position: fixed; /* Fixed to ensure the background stays fixed during scrolling */
+    top: 0; /*Zero top to position top edge of the pseudo-body element at the top edge of viewport*/
+    left: 0; /*Zero left to position left edge of the pseudo-body element at the left edge of viewport*/
+    width: 100%; /*100% width and height to set pseudo-body element to cover entire viewport*/
+    height: 100%;    
+    background-size: cover; /*Ensure background image covers the entire pseudo-body element*/
+    background-repeat: no-repeat; /*Prevent the background of the pseudo-body element from repeating*/
+    background-attachment: fixed; /*Fixed background image in place so it doesn't scoll with content*/
+    opacity: 0.35; /*Set opacity of background image to make it semi-transparent*/
+    z-index: -1; /* Ensure the pseudo-body element stays behind the content of the body element*/
+}
+body.index::before {
+    content: ''; /* Ensure the pseudo-element is created */
+    position: fixed; /* Fix the position to cover the entire viewport */
+    top: 0; /* Align the top edge of the pseudo-element with the viewport */
+    left: 0; /* Align the left edge of the pseudo-element with the viewport */
+    width: 100%; /* Ensure the pseudo-element covers the entire width of the viewport */
+    height: 100%; /* Ensure the pseudo-element covers the entire height of the viewport */
+    background-image: url('background_image.jpg'); /*Set background image for pseudo-body element*/
+    background-size: cover; /* Cover the entire viewport while maintaining the aspect ratio */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+    opacity: 0.35; /* Set opacity for the background image */
+    z-index: -1; /* Place the pseudo-element behind other content */  
+}
+body.about::before {
+    content: ''; /* Ensure the pseudo-element is created */
+    position: fixed; /* Fix the position to cover the entire viewport */
+    top: 0; /* Align the top edge of the pseudo-element with the viewport */
+    left: 0; /* Align the left edge of the pseudo-element with the viewport */
+    width: 100%; /* Ensure the pseudo-element covers the entire width of the viewport */
+    height: 100%; /* Ensure the pseudo-element covers the entire height of the viewport */
+    background-image: url("about_background.jpg"); /*Set background image for pseudo-body element*/
+    background-size: cover; /* Cover the entire viewport while maintaining the aspect ratio */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+    opacity: 0.35; /* Set opacity for the background image */
+    z-index: -1; /* Place the pseudo-element behind other content */  
+}
+body.projects_page::before {
+    content: ''; /* Ensure the pseudo-element is created */
+    position: fixed; /* Fix the position to cover the entire viewport */
+    top: 0; /* Align the top edge of the pseudo-element with the viewport */
+    left: 0; /* Align the left edge of the pseudo-element with the viewport */
+    width: 100%; /* Ensure the pseudo-element covers the entire width of the viewport */
+    height: 100%; /* Ensure the pseudo-element covers the entire height of the viewport */
+    background-image: url("projects_page.jpg"); /*Set background image for pseudo-body element*/
+    background-size: cover; /* Cover the entire viewport while maintaining the aspect ratio */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+    opacity: 0.35; /* Set opacity for the background image */
+    z-index: -1; /* Place the pseudo-element behind other content */  
+}
+body.house_price::before {
+    content: ''; /* Ensure the pseudo-element is created */
+    position: fixed; /* Fix the position to cover the entire viewport */
+    top: 0; /* Align the top edge of the pseudo-element with the viewport */
+    left: 0; /* Align the left edge of the pseudo-element with the viewport */
+    width: 100%; /* Ensure the pseudo-element covers the entire width of the viewport */
+    height: 100%; /* Ensure the pseudo-element covers the entire height of the viewport */
+    background-image: url("house_price_bg.jpg"); /*Set background image for pseudo-body element*/
+    background-size: cover; /* Cover the entire viewport while maintaining the aspect ratio */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+    opacity: 0.35; /* Set opacity for the background image */
+    z-index: -1; /* Place the pseudo-element behind other content */  
+}
+body.text_and_sent_analysis::before {
+    content: ''; /* Ensure the pseudo-element is created */
+    position: fixed; /* Fix the position to cover the entire viewport */
+    top: 0; /* Align the top edge of the pseudo-element with the viewport */
+    left: 0; /* Align the left edge of the pseudo-element with the viewport */
+    width: 100%; /* Ensure the pseudo-element covers the entire width of the viewport */
+    height: 100%; /* Ensure the pseudo-element covers the entire height of the viewport */
+    background-image: url("text_and_sent_analysis.jpg"); /* Set background image */
+    background-size: cover; /* Cover the entire viewport while maintaining the aspect ratio */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+    opacity: 0.3; /* Set opacity for the background image */
+    z-index: -1; /* Place the pseudo-element behind other content */    
+}
+body.facial_recogn_sys::before {
+    content: ''; /* Ensure the pseudo-element is created */
+    position: fixed; /* Fix the position to cover the entire viewport */
+    top: 0; /* Align the top edge of the pseudo-element with the viewport */
+    left: 0; /* Align the left edge of the pseudo-element with the viewport */
+    width: 100%; /* Ensure the pseudo-element covers the entire width of the viewport */
+    height: 100%; /* Ensure the pseudo-element covers the entire height of the viewport */
+    background-image: url("facial_recogn_sys.jpg"); /*Set background image for pseudo-body element*/
+    background-size: cover; /* Cover the entire viewport while maintaining the aspect ratio */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+    opacity: 0.35; /* Set opacity for the background image */
+    z-index: -1; /* Place the pseudo-element behind other content */  
+}
+body.speech_analysis::before {
+    content: ''; /* Ensure the pseudo-element is created */
+    position: fixed; /* Fix the position to cover the entire viewport */
+    top: 0; /* Align the top edge of the pseudo-element with the viewport */
+    left: 0; /* Align the left edge of the pseudo-element with the viewport */
+    width: 100%; /* Ensure the pseudo-element covers the entire width of the viewport */
+    height: 100%; /* Ensure the pseudo-element covers the entire height of the viewport */
+    background-image: url("speech_analysis.jpg"); /*Set background image for pseudo-body element*/
+    background-size: cover; /* Cover the entire viewport while maintaining the aspect ratio */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+    opacity: 0.45; /* Set opacity for the background image */
+    z-index: -1; /* Place the pseudo-element behind other content */ 
+}
+
+/*Header style object*/
+header{
+    text-align: center; /*Center text horizontally*/
+    font-size: 2em; /*Set the font size to twice the size of the default font size*/
+    color: white; /*Set text color to white*/
+    position: relative; /*Positions the header element relative to its normal position*/
+    margin-top: 10vh; /*Add a top margin equivalent to 10% of the viewport height*/
+}
+/*.responsive-img style object*/
+.responsive-img{ /*Class selector for responsive images*/
+    max-width: 100%; /*Ensures the image width doesn't exceed the width of its container*/
+    height: auto; /*Maintain aspect ratio of images*/
+    display: block; /*Displays the image as a block-level element*/
+    margin: 20px auto; /*Center */
+    max-height: 300px; /*Maxium heigh of images to control their size*/
+}
+/*Navigation style object*/
+nav {
+    background-color: #333; /*Dark gray background color for navigation element */
+    overflow: hidden; /*Ensure content does not overflow the other container*/
+    position: fixed; /*Fix navigation bar to top of the viewport*/
+    width: 100%; /*Sets width of the navigation bar to 100% of the viewport width*/
+    top: 0; /*Position the navigation bar at top of the viewport*/
+    z-index: 1000; /*Place navigation bar above other elements*/
+}
+/*Navigation Unorder List style object*/
+nav ul {
+    list-style-type: none; /*Remove any default list styling*/
+    margin: 0; /*Remove default margins*/
+    padding: 0; /*Remove default padding*/
+    display: flex; /*Display the list items in a flex container*/
+    justify-content: center; /*Center the list items horizontally*/
+}
+/*Navigation Unordered List List item style object*/
+nav ul li {
+    padding: 14px 20px; /*Add padding around each list item*/
+}
+/*Navigation Unordered List List item anchor element style object*/
+nav ul li a {
+    color: white; /*Set color to white*/
+    text-decoration: none; /*Remove default underline from the links*/
+    display: block; /*Displays the links as block-level elements*/
+}
+/*Style objects for the anchor elements when they are hovered over*/
+nav ul li a:hover, nav ul li a.active{
+    background-color: #575757; /*Set background color to lighter gray when hovered over*/
+}
+.prj_pg_header {
+    margin-top: 80px;
+    text-align: center;
+    color: #000;
+}
+.project_pg_lst {
+    margin-top: 60px;
+    padding: 20px;
+    text-decoration: none;
+}
+.project_pg_lst ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.project_pg_lst ul li {
+    margin-bottom: 15px; 
+    padding: 10px; 
+    background-color: #aecffa; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.project_pg_lst ul li a {
+    color: #333; 
+    text-decoration: none; 
+    font-weight: bold;
+    transition: transform 0.3s;  
+    display: inline-block;  
+}
+.project_pg_lst ul li a:link,
+.project_pg_lst ul li a:visited {
+    color: #333; 
+}
+
+.project_pg_lst ul li a:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    
+}
+.expertise-goals {
+    color: #000; 
+    font-weight: bold; 
+    font-size: 2.5em; 
+    margin-top: 20px; 
+    text-align: center; 
+}
+.summary {
+    color: #000; 
+    font-weight: bold; 
+    font-size: 2.0em; 
+    margin-top: 20px; 
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center; 
+}
+.small-img {
+    width: 90px; 
+    height: auto; 
+    margin-left: 10px; 
+    vertical-align: middle;
+    background-color: white;
+    padding: 10px;
+    border: 1dvh solid #ddd; 
+}
+.ai-project-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin-left: 15px;    
+}
+.responsive-img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 20px auto;
+}
+.ai-project-list li {
+    margin-bottom: 20px; 
+    font-weight: bold;
+}
+.list-item {
+    display: flex; 
+    align-items: center; 
+}
+.ai-project-list li a {
+    text-decoration: none; 
+    color: #000; 
+    font-weight: bold; 
+    margin-right: 10px;    
+}
+.ai-project-list li a:hover {
+    color: #007BFF;     
+}
+.ai-project-list li ul {
+    margin-top: 10px; 
+    list-style-type: disc;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.ai-project-list li ul li {
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+.video-container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #c0b3b3; 
+    border-radius: 8px; 
+}
+
+.video-container video {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    max-height: 450px;
+    object-fit: contain;
+}
+.press_play {
+    text-align: center; 
+    font-size: 2em; 
+    color: #000; 
+    position: relative; 
+    margin-top: 10vh;
+}
+a {
+    color: #007BFF; 
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #0056b3; 
+    text-decoration: underline; 
+}
+.hs_pr_overview, .tech_used, .key_contrib, .achievements {
+    margin-top: 20px; 
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;        
+}
+.text-content {
+    flex-grow: 1; 
+    margin-right: 20px;   
+    font-weight: bold; 
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.image-container {
+    flex-shrink: 0; 
+    max-width: 735px;
+    margin-left:  20px;
+}
+
+.right-image {        
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    border: 1dvh solid #ddd;   
+}
+.list-item:hover .small-img {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+

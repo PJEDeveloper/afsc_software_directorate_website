@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development – Facial Recognition System</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .face_recogn_img {
+            background-color: white;
+            padding: 10px;
+            border: 1dvh solid #ddd; 
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+        body {
+            font-weight: bold;
+        }
+        em {
+            font-style: italic;
+        }
+        strong {
+            font-weight: bolder;
+        }
+        .sp_over_container, .combo_container, .face_recogn_preview {
+            margin-left: 15px;
+        }       
+        #backToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        }
+        .face_recogn_preview p a:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+            display: inline-block;
+        }   
+    </style>
+</head>
+<body class="facial_recogn_sys">
+    <header style="color: black;">
+        <b>AI Development - Facial Recognition System</b>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="about.html"><b>About</b></a></li>
+            <li><a href="projects_page.html"><b>Projects Page</b></a></li>
+            <li><a href="house_price.html"><b>Machine Learning – Housing Market Analysis</b></a></li>
+            <li><a href="text_and_sent_analysis.html"><b>Text and Sentiment Analysis</b></a></li>
+            <li><a href="facial_recogn_sys.html"><b>AI Development – Facial Recognition System</b></a></li>
+            <li><a href="speech_analysis.html"><b>AI-based Speech Analysis Program</b></a></li>
+        </ul>
+    </nav>
+    <div class="sp_over_container">
+        <h3>Overview</h3>
+        <ul>
+            <li>
+                This Python based program analyzes photos with <strong><em>DeepFace library</em></strong> for age, gender, and emotion with <strong><em>enforced detection</em></strong> allowing
+                for the program to return results without throwing an error if no faces found and uses <strong><em>detector backend</em></strong> optimized
+                to increase results of photo analysis
+            </li>
+        </ul>
+    </div>
+    <div class="combo_container">
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>
+                Python, DeepFace, tkinter
+            </li>
+        </ul>
+        <h3>Key Contributions</h3>
+        <ul>
+            <li>
+                Developed GUI for image uploading and result display
+            </li>
+            <li>
+                Integrated DeepFace for age, gender, and emotion analysis
+            </li>
+            <li>
+                Implemented error handling mechanisms
+            </li>
+        </ul>
+        <h3>Achievements</h3>
+        <ul>
+            <li>
+                Functional application providing demographic and emotional insights
+            </li>
+            <li>
+                Bridged the gap between AI algorithms and user-friendly applications
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div class="face_recogn_preview">
+        <h3>Facial Recognition Code Preview</h3>
+        <p>For full Facial Recognition System, <a href="https://github.com/PJEDeveloper/Directorate/tree/main/facial_recognition" target="_blank" rel="noopener noreferrer">click here</a></p>
+    </div>
+    <div class="facial_recogn_sys">
+        <img src="facial_recogn_sys_img.jpg" alt="Facial Recognition Code Snippet" class="face_recogn_img">
+    </div>
+    <button id="backToTop" style="display: none;">Back to Top</button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        document.getElementById("backToTop").onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
+</body>
+</html>

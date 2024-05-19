@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-based Speech Analysis Program</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-weight: bold;            
+        }    
+        em {
+            font-style: italic;
+        }
+        strong {
+            font-weight: bolder;
+        }
+        .face_recogn_img{
+            max-width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border: 1dvh solid #ddd;             
+        }
+        .speech_analysis_prgm {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;                   
+        }
+        .speech_analysis_text {
+            align-self: flex-start;
+            margin-right: 20px;
+        }
+        .speech_analysis_img {
+            flex: 0 0 auto;
+        }
+        .sp_analysis_over_container, .sp_analysis_combo_container ,.sp_analysis_over_container {
+            margin-left: 15px;
+        }        
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }  
+        .speech_analysis_text p a:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+            display: inline-block;
+        }  
+    </style>
+</head>
+</head>
+<body class="speech_analysis">
+    <header style="color: #000;">
+        <b>AI-based Speech Analysis Program</b>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="about.html"><b>About</b></a></li>
+            <li><a href="projects_page.html"><b>Projects Page</b></a></li>
+            <li><a href="house_price.html"><b>Machine Learning – Housing Market Analysis</b></a></li>
+            <li><a href="text_and_sent_analysis.html"><b>Text and Sentiment Analysis</b></a></li>
+            <li><a href="facial_recogn_sys.html"><b>AI Development – Facial Recognition System</b></a></li>
+            <li><a href="speech_analysis.html"><b>AI-based Speech Analysis Program</b></a></li>            
+        </ul>
+    </nav>
+    <div class="sp_analysis_over_container">
+        <h3>Overview</h3>
+        <ul>
+            <li>
+                This language learning tool utilizes speech recognition and speech-to-text technology,
+                combined with sentiment analysis from TextBlob, to provide users with feedback on the
+                polarity and subjectivity of their recorded audio
+            </li>
+            <li>
+                The tool features a Tkinter-based GUI, allowing users to easily start and stop recordings
+            </li>
+            <li>
+                Feedback is delivered in both text and audio formats through the GUI, enhancing the learning experience
+            </li>
+        </ul>
+    </div>
+    <div class="sp_analysis_combo_container">
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>
+                Python, pyttsx3, TextBlob, speech_recognition, tkinter
+            </li>
+        </ul>
+        <h3>Key Contributions</h3>
+        <ul>
+            <li>
+                Developed modules for speech recognition, sentiment analysis, and text-to-speech feedback
+            </li>
+            <li>
+                Designed a user-friendly GUI for real-time interaction
+            </li>
+            <li>
+                Employed modular programming practices
+            </li>
+        </ul>
+        <h3>Achievements</h3>
+        <ul>
+            <li>
+                Fully functional speech analysis application with real-time feedback
+            </li>
+            <li>
+                Enhanced user engagement through auditory feedback
+            </li>
+        </ul>
+        </div>
+        <br>
+        <br>
+        <div class="speech_analysis_prgm">
+            <div class="speech_analysis_text">
+                <h3>Speech Analysis Code Preview</h3>
+                <p>For full Speech Analysis tool code, <a href="https://github.com/PJEDeveloper/Directorate/tree/main/language_learning_tool_v3" target="_blank" rel="noopener noreferrer">click here</a></p>
+            </div>
+        <div class="speech_analysis_img">
+            <img src="lang_learn_tool.jpg" alt="Facial Recognition Code Snippet" class="face_recogn_img">
+        </div>
+    </div>
+    <button id="backToTop" style="display: none;">Back to Top</button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        document.getElementById("backToTop").onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
+</body>
+</html>
