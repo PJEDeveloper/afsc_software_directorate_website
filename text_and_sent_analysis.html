@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Sentiment Analysis</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-weight: bold;
+        }
+        em {
+            font-style: italic;
+        }
+        .over_container, .combo_container {
+            padding-left: 15px; 
+            margin-left: 15px;     
+        }
+        .over_container ul li a:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        .flex-container .text {
+            max-width: 50%;
+            margin-right: 20px;
+        }
+        .right-aligned-image {
+            background-color: white;
+            padding: 10px;
+            border: 1dvh solid #ddd;
+            max-width: 45%;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }        
+        #backToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }            
+    </style>
+</head>
+<body class="text_and_sent_analysis">
+    <header style="color: #000;">
+        <b>Text and Sentiment Analysis</b>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="about.html"><b>About</b></a></li>
+            <li><a href="projects_page.html"><b>Projects Page</b></a></li>
+            <li><a href="house_price.html"><b>Machine Learning – Housing Market Analysis</b></a></li>
+            <li><a href="text_and_sent_analysis.html"><b>Text and Sentiment Analysis</b></a></li>
+            <li><a href="facial_recogn_sys.html"><b>AI Development – Facial Recognition System</b></a></li>
+            <li><a href="speech_analysis.html"><b>AI-based Speech Analysis Program</b></a></li>
+        </ul>
+    </nav>
+    <div class="over_container">
+        <h3>
+            <b>Overview</b>
+        </h3>
+        <ul>
+            <li>
+                PDF Sentiment Analysis using <strong>pdfplumber</strong>              
+            </li>        
+            <ul>
+                <li>
+                    This program reads text from any imported PDF file and performs sentiment analysis using the VADER Sentiment Analyzer
+                    from the NLTK library. After running the script, the sentiment analysis results will be displayed in GUI window.
+                </li>
+            </ul>
+        </ul>
+        <ul>
+            <li>
+                URL Sentiment Analysis using <strong>BeautifulSoup</strong>      
+            </li>        
+            <ul>
+                <li>
+                    This program reads text from the contents within any url and performs sentiment analysis using the VADER Sentiment Analyzer from the NLTK
+                    library. After running the script, the sentiment analysis results will be displayed in GUI window.
+                </li>
+            </ul>
+            <li>
+                Click <a href="https://github.com/PJEDeveloper/Directorate/tree/main/sentiment_analysis" target="_blank" rel="noopener noreferrer"> Text and Sentiment Analysis link to acess full program</a>
+            </li>
+        </ul>
+    </div>
+    <div class="combo_container">
+        <h3>
+            Technologies Used        
+        </h3>
+            <ul>
+                <li>
+                    Python, BeautifulSoup, pdfplumber, NLTK, tkinter
+                </li>
+            </ul>
+        <h3>
+            Key Contributions
+        </h3>
+        <ul>
+            <li>
+                Implemented web scraping and PDF text extraction
+            </li>
+            <li>
+                Integrated sentiment analysis using NLTK's VADER
+            </li>
+            <li>
+                Designed user-friendly GUIs
+            </li>
+        </ul>        
+            <h3>
+                Achievements
+            </h3>
+                <ul>
+                    <li>
+                        Functional application providing demographic and emotional insights
+                    </li>
+                    <li>
+                        Bridged the gap between AI algorithms and user-friendly applications
+                    </li>
+                </ul>
+    </div>
+    <div class="container">    
+        <div class="flex-container">
+            <div class="text">
+                <p>Load PDF File</p>
+                <p>This step involves loading a PDF file for analysis using <em>pdfplumber</em>.</p>
+            </div>
+            <img src="load_pdf.jpg" alt="Load PDF" class="right-aligned-image">  
+        </div>
+        
+        <div class="flex-container">
+            <div class="text">
+                <p>Load URL</p>
+                <p>This step involves scraping text from a URL using <em>BeautifulSoup</em>.</p>
+            </div>
+            <img src="load_url.jpg" alt="Load URL" class="right-aligned-image">
+        </div>
+
+        <div class="flex-container">
+            <div class="text">
+                <p>Analyze Sentiment</p>
+                <p>This step involves analyzing the sentiment of the extracted text using VADER.</p>
+            </div>
+            <img src="analyze_sentiment.jpg" alt="Analyze Sentiment" class="right-aligned-image">  
+        </div>
+    </div>
+    <button id="backToTop" style="display: none;">Back to Top</button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        document.getElementById("backToTop").onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        #backToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body class="projects_page">
+    <header class="prj_pg_header">
+        <b>Projects Page</b>
+        <h4 style='color: black;'><em><span>Python Based AI Programming</span></em></h4>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="about.html"><b>About</b></a></li>
+            <li><a href="projects_page.html"><b>Projects Page</b></a></li>
+            <li><a href="house_price.html"><b>Machine Learning – Housing Market Analysis</b></a></li>
+            <li><a href="text_and_sent_analysis.html"><b>Text and Sentiment Analysis</b></a></li>
+            <li><a href="facial_recogn_sys.html"><b>AI Development – Facial Recognition System</b></a></li>
+            <li><a href="speech_analysis.html"><b>AI-based Speech Analysis Program</b></a></li>            
+        </ul>
+    </nav>
+    <div class="project_pg_lst">
+    <ul>
+        <li><a href="house_price.html">Machine Learning – Housing Market Analysis (Click to Read More)</a></li>       
+            <ul class="ul_ml">
+                <li>
+                    Liner, Ridge, Lasso Regression, and Randon Forest machine learning models fit to Kaggle and Zillow datasets to predict median house price
+                </li>
+            </ul>
+            <br>
+        <li><a href="text_and_sent_analysis.html">Text and Sentiment Analysis (Click to Read More)</a></li>        
+            <ul class="ul_txt_and_sent">
+                <li>
+                    Text and Sentiment Analysis program analyzing the polarity and sentiment of the text contained in a PDF file or at a URL
+                </li>
+            </ul>
+            <br>
+        <li><a href="facial_recogn_sys.html">AI Development – Facial Recognition System (Click to Read More)</a></li>       
+            <ul class="ul_fac_rec_sys">
+                <li>
+                    AI DeepFace technologies harnessed to recognize from images age, gender, and emotion
+                </li>
+            </ul>
+            <br>
+        <li><a href="speech_analysis.html">AI-based Speech Analysis Program (Click to Read More)</a></li>
+            <ul class="ul_sp_analysis">
+                <li>
+                    Language learning tool capable of recording speech, analyzing its sentiment and polarity, and providing text and audio feedback
+                </li>
+            </ul>
+    </ul>
+    <div>
+        <button id="backToTop" style="display: none;">Back to Top</button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction();
+            };
+    
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("backToTop").style.display = "block";
+                } else {
+                    document.getElementById("backToTop").style.display = "none";
+                }
+            }
+    
+            // When the user clicks on the button, scroll to the top of the document
+            document.getElementById("backToTop").onclick = function() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+            };
+        </script>
+</body>
+</html>
